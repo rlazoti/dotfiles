@@ -1,0 +1,6 @@
+source ~/.terminal/home
+
+for i in `ls -1 $HOME/.terminal/*.sh`
+do
+  source "$i"
+done
