@@ -11,6 +11,8 @@ export GROOVY_HOME=$HOME/Programs/groovy-2.0.1
 export SBT_HOME=$HOME/Programs/sbt
 export PLAY_HOME=$HOME/Programs/play-2.0.4
 export SUBLIME_HOME=$HOME/Programs/SublimeText2
+export PHANTOM_HOME=$HOME/Programs/phantomjs-1.9.1
+export JENV_HOME=$HOME/.jenv
 
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$SCALA_HOME/bin:$PATH
@@ -25,4 +27,6 @@ export PATH=$GROOVY_HOME/bin:$PATH
 export PATH=$SUBLIME_TEXT:$PATH
 export PATH=$SBT_HOME/bin:$PATH
 export PATH=$PLAY_HOME:$PATH
+export PATH=$PHANTOM_HOME/bin:$PATH
+export PATH=$JENV_HOME/bin:$PATH
 export PATH=$PATH:~/bin
