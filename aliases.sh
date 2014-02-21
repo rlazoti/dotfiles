@@ -10,7 +10,7 @@ alias -g gs='echo "do not fuck with me asshole!"'
 alias -g gst='git status'
 alias -g gaa='git add .'
 alias -g gcam='git commit -a'
-alias -g gcam.='git commit -am "asd"'
+alias -g gcam.='git commit -am "an internal commit! ;)"'
 alias -g gck='git checkout'
 alias -g gb='git branch'
 alias -g gpprod='git pull --rebase origin production --tags'
@@ -27,5 +27,6 @@ alias -g pcat='pygmentize -f terminal256 -O style=native -g'
 alias -g hosts='sudo vi /etc/hosts'
 alias -g n="node"
 alias -g emacsd='emacs --daemon'
-alias -g e='emacsclient -c'
-alias -g E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudoedit"
+alias -g ec='emacsclient -c'
+alias -g et='emacsclient -t'
+alias -g E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
