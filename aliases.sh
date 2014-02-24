@@ -30,3 +30,4 @@ alias -g emacsd='emacs --daemon'
 alias -g ec='emacsclient -c'
 alias -g et='emacsclient -t'
 alias -g E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
+alias -g vi='emacsclient -t'

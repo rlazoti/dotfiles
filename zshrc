@@ -52,5 +52,8 @@ plugins=(history themes tmux)
 fpath=(~/.terminal/rvm-completion $fpath)
 fpath=(~/.terminal/git-completion $fpath)
 
+# add suport for color in terminal
+export TERM="xterm-256color"
+
 source $ZSH/oh-my-zsh.sh
 source ~/.terminal/enviroment
