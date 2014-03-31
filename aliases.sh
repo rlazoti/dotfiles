@@ -32,3 +32,4 @@ alias -g et='emacsclient -t'
 alias -g E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
 alias -g vi='emacsclient -t'
 alias -g sk9='sudo kill -9'
+alias -g psg='ps aux | grep'
