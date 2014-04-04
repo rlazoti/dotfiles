@@ -1,7 +1,7 @@
 export JETTY_HOME=$HOME/Programs/jetty-7.0.1
 export MAGICK_HOME=$HOME/Programs/ImageMagick-6.5.8
 export DYLD_LIBRARY_PATH=$MAGICK_HOME/lib
-export SCALA_HOME=$HOME/Programs/scala-2.10.0
+export SCALA_HOME=$HOME/Programs/scala-2.10.4
 export M2_HOME=$HOME/Programs/apache-maven-3.0.4
 export GRAILS_HOME=$HOME/Programs/grails-1.3.4
 export MONGO_HOME=$HOME/Programs/mongodb-2.0.2
