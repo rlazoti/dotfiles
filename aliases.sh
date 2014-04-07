@@ -27,9 +27,10 @@ alias -g pcat='pygmentize -f terminal256 -O style=native -g'
 alias -g hosts='E /etc/hosts'
 alias -g n="node"
 alias -g emacsd='emacs --daemon'
-alias -g ec='emacsclient -c &'
+alias -g ec='emacsclient -c'
 alias -g et='emacsclient -t'
-alias -g E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
-alias -g vi='emacsclient -t'
+alias -g E="SUDO_EDITOR=\"vi -a emacs\" sudoedit"
+alias -g vi='emacs -nw --no-splash'
 alias -g sk9='sudo kill -9'
 alias -g psg='ps aux | grep'
+alias -g ee='emacs --no-splash &'
