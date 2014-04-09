@@ -29,8 +29,8 @@ alias -g n="node"
 alias -g emacsd='emacs --daemon'
 alias -g ec='emacsclient -c'
 alias -g et='emacsclient -t'
-alias -g E="SUDO_EDITOR=\"vi -a emacs\" sudoedit"
+alias -g E="SUDO_EDITOR=\"emacs -nw --no-splash\" sudoedit"
 alias -g vi='emacs -nw --no-splash'
 alias -g sk9='sudo kill -9'
 alias -g psg='ps aux | grep'
-alias -g ee='emacs --no-splash &'
+alias -g ee='(setsid emacs --no-splash &)'
