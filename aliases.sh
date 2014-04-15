@@ -27,7 +27,7 @@ alias -g pcat='pygmentize -f terminal256 -O style=native -g'
 alias -g hosts='E /etc/hosts'
 alias -g n="node"
 alias -g E="SUDO_EDITOR=\"emacs -nw --no-splash\" sudoedit"
-alias -g vi="emacs -nw --no-splash XMODIFIERS=\'\'"
+alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash"
 alias -g sk9='sudo kill -9'
 alias -g psg='ps aux | grep'
-alias -g ee="(nohup emacs --no-splash XMODIFIERS=\'\' >&/dev/null &)"
+alias -g ee="(XMODIFIERS=\'\' nohup emacs --no-splash >&/dev/null &)"
