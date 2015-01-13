@@ -5,7 +5,7 @@ if [[ "$OSTYPE" = *linux* ]] then
 	 export M2_HOME=$HOME/Programs/apache-maven
 
    export PATH=$SCALA_PATH/bin:$PATH
-	 export PATH=$M2_PATH/bin:$PATH
+	 export PATH=$M2_HOME/bin:$PATH
 fi
 
 export PATH=/usr/local/bin:$PATH
