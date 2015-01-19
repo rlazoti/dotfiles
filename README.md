@@ -1,26 +1,36 @@
 zsh-setup
 =========
 
-my zsh configuration files
+My dot files for:
 
-Installations
+* zsh
+* tmux
+* tmux-powerline
+* oh-my-zsh
+* shell alias
+* shell env variables
+
+Installation
 =============
 
 ### Requirements
 
 Install **zsh** and define it as you default shell.
 
-### Installing
+### Install
 
 Clone this repo into your home directory either as .terminal (linux/mac). Such as:
 
-```git clone https://github.com/rlazoti/zsh-setup ~/.terminal```
+```sh
+$ git clone https://github.com/rlazoti/zsh-setup ~/.terminal
+```
 
 and run this script to create the symbolic links and install its dependencies:
 
-```.terminal/install.zsh```
+```sh
+$ ~/.terminal/install.zsh
+```
 
-Usage
-=====
+### Usage
 
-Edit the file *.terminal/home*, and add your current home directory.
+Edit the file *~/.terminal/home*, and add your current home directory.
