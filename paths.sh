@@ -8,6 +8,8 @@ if [[ "$OSTYPE" = *linux* ]] then
 	 export PATH=$M2_HOME/bin:$PATH
 fi
 
+export EDITOR="emacs -nw --no-splash"
+
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$JENV_HOME/bin:$PATH
