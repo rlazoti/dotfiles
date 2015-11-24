@@ -6,6 +6,9 @@ git clone git@github.com:erikw/tmux-powerline.git ~/.terminal/tmux-powerline
 echo "install oh-my-zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
+# define global git commit msg template
+git config --global commit.template ~/.terminal/git_commit_msg.txt
+
 # set hidden files
 echo "install hidden files..."
 ln -s ~/.terminal/zshenv ~/.zshenv
