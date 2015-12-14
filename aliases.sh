@@ -29,6 +29,7 @@ alias -g hosts='E /etc/hosts'
 alias -g n="node"
 alias -g E="SUDO_EDITOR=\"emacs -nw --no-splash\" sudoedit"
 alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash"
+alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash --no-init-file"
 alias -g sk9='sudo kill -9'
 alias -g psg='ps aux | grep'
 alias -g ee="(XMODIFIERS=\'\' nohup emacs --no-splash >&/dev/null &)"
