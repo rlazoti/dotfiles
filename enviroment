@@ -1,6 +1,6 @@
 source ~/.terminal/home
 
-for i in `ls -1 $HOME/.terminal/*.sh`
+for i in `ls -1 $HOME/.terminal/env-scripts/*.sh`
 do
   source "$i"
 done
