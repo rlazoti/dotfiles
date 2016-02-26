@@ -9,7 +9,7 @@ alias -g reload='source ~/.zshrc'
 alias -g gs='echo "do not fuck with me asshole!"'
 alias -g gst='git status -sb'
 alias -g gaa='git add .'
-alias -g gcam='git commit -a'
+alias -g gcam='git commit -m'
 alias -g gcam.='git commit -am "an awesome commit! ;)"'
 alias -g gck='git checkout'
 alias -g gckb='git checkout -b'
@@ -25,9 +25,9 @@ alias -g gpso='git push origin'
 alias -g grb='git rebase'
 alias -g gmg='git merge'
 alias -g k='gitk'
-alias -g hosts='E /etc/hosts'
+alias -g hosts="sudo XMODIFIERS=\'\' $EDITOR /etc/hosts"
 alias -g n="node"
-alias -g E="SUDO_EDITOR=\"emacs -nw --no-splash\" sudoedit"
+alias -g E="sudo $EDITOR "
 alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash"
 alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash --no-init-file"
 alias -g sk9='sudo kill -9'
