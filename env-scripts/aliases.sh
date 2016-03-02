@@ -25,7 +25,7 @@ alias -g gpso='git push origin'
 alias -g grb='git rebase'
 alias -g gmg='git merge'
 alias -g k='gitk'
-alias -g hosts="sudo XMODIFIERS=\'\' $EDITOR /etc/hosts"
+alias -g hosts="sudo XMODIFIERS=\'\' vi /etc/hosts"
 alias -g n="node"
 alias -g E="sudo $EDITOR "
 alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash"
