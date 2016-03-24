@@ -2,7 +2,9 @@
 if [[ "$OSTYPE" = *linux* ]] then
    export SCALA_PATH=$HOME/Programs/scala
    export M2_HOME=$HOME/Programs/apache-maven
+   export SWIFT_PATH=$HOME/Programs/swift/usr
 
+	 export PATH=$SWIFT_PATH/bin:$PATH
    export PATH=$SCALA_PATH/bin:$PATH
    export PATH=$M2_HOME/bin:$PATH
 	 export PATH=$HOME/.rvm/bin:$PATH
