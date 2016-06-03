@@ -1,36 +1,39 @@
-zsh-setup
-=========
+dotfiles
+========
 
-My dot files for:
+This repository contains all my dot files used in both Linux and Mac.
+
+It contains definitions for:
 
 * zsh
+* git
 * tmux
-* tmux-powerline
+* aliases
 * oh-my-zsh
-* shell alias
-* shell env variables
+* tmux-powerline
+* environment variables (AKA $PATH and others)
+
 
 Installation
 =============
 
-### Requirements
+### Prerequisites
 
 Install **zsh** and define it as you default shell.
 
+
 ### Install
 
-Clone this repo into your home directory either as .terminal (linux/mac). Such as:
+Clone this repo into your home directory as .terminal:
 
 ```sh
-$ git clone https://github.com/rlazoti/zsh-setup ~/.terminal
+$ git clone https://github.com/rlazoti/dotfiles ~/.terminal
 ```
 
-and run this script to create the symbolic links and install its dependencies:
+Edit the file *~/.terminal/home*, and add your current home directory (Ex: /home/rlazoti).
+
+Then run this script to create all symbolic links and install its dependencies:
 
 ```sh
 $ ~/.terminal/install.zsh
 ```
-
-### Usage
-
-Edit the file *~/.terminal/home*, and add your current home directory.
