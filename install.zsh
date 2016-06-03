@@ -1,6 +1,6 @@
 # clone tmux-powerline
 echo "install tmux-powerline..."
-git clone git@github.com:erikw/tmux-powerline.git ~/.terminal/tmux-powerline
+git clone https://github.com/erikw/tmux-powerline.git ~/.terminal/tmux-powerline
 
 # clone oh-my-zsh
 echo "install oh-my-zsh"
