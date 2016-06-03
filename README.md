@@ -19,7 +19,17 @@ Installation
 
 ### Prerequisites
 
-Install **zsh** and define it as you default shell.
+
+* Install **zsh** and define it as you default shell.
+* Install **tmux**.
+* Install the font **???** and define it as your terminal font.
+* Move or remove the following files from your home directory:
+
+```sh
+~/.zshenv
+~/.zshrc
+~/.tmux.conf
+```
 
 
 ### Install
@@ -32,16 +42,11 @@ $ git clone https://github.com/rlazoti/dotfiles ~/.terminal
 
 Edit the file *~/.terminal/home*, and add your current home directory (Ex: /home/rlazoti).
 
-Verify if there's any of these files in your home. If so, please move or remove them.
-
-```sh
-~/.zshenv
-~/.zshrc
-~/.tmux.conf
-```
 
 Then run this script to create all symbolic links and install its dependencies:
 
 ```sh
 $ ~/.terminal/install.zsh
 ```
+
+Restart your terminal and have fun! :)
