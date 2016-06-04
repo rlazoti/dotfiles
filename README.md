@@ -17,7 +17,14 @@ It contains definitions for:
 Screenshot
 ==========
 
-![how it looks like](https://raw.githubusercontent.com/rlazoti/dotfiles/master/screenshot.png)
+#### Mac OS
+
+![how it looks like](https://raw.githubusercontent.com/rlazoti/dotfiles/master/screenshot-mac.png)
+
+
+#### Linux
+
+![how it looks like](https://raw.githubusercontent.com/rlazoti/dotfiles/master/screenshot-linux.png)
 
 
 Installation
