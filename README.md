@@ -59,3 +59,9 @@ $ ~/.terminal/install.zsh
 ```
 
 Restart your terminal and have fun! :)
+
+
+Author
+======
+
+Rodrigo Lazoti - rodrigolazoti@gmail.com
