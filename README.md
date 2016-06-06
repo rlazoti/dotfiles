@@ -45,6 +45,7 @@ To it works properly you need to ensure that all prerequisites have been done co
 ~/.zshenv
 ~/.zshrc
 ~/.tmux.conf
+~/.gitignore
 ```
 
 
