@@ -1,5 +1,6 @@
 # linux
 if [[ "$OSTYPE" = *linux* ]] then
+   export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
    export SCALA_PATH=$HOME/Programs/scala
    export M2_HOME=$HOME/Programs/apache-maven
    export SWIFT_PATH=$HOME/Programs/swift/usr
@@ -16,7 +17,9 @@ if [[ "$OSTYPE" = *linux* ]] then
 # macos
 else
     export PATH=$HOME/.rbenv/shims:$PATH
+    export PATH=$HOME/.rvm/bin:$PATH
     export PATH=/usr/local/sbin:$PATH
+    export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 fi
 
 # shared
