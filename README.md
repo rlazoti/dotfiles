@@ -68,6 +68,17 @@ $ ~/.terminal/install.zsh
 
 Restart your terminal and have fun! :)
 
+### MacOS Users
+
+To add *opendiff* as your default difftool/mergetool, run the following commands:
+
+```
+git config --global diff.tool opendiff
+git config --global merge.tool opendiff
+git config --global difftool.prompt false
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer/
+```
+
 
 Author
 ======
