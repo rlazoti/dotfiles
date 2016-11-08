@@ -57,4 +57,4 @@ fpath=(~/.terminal/git-completion $fpath)
 export TERM="xterm-256color"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.terminal/enviroment
+source ~/.terminal/environment
