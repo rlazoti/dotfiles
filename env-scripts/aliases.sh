@@ -32,5 +32,7 @@ alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash"
 alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash --no-init-file"
 alias -g sk9='sudo kill -9'
 alias -g psg='ps aux | grep'
-#alias -g ee="(XMODIFIERS=\'\' nohup emacs --no-splash >&/dev/null &)"
 alias -g ee="open -n -a /Applications/Emacs.app $1"
+alias -g b="brew"
+alias -g bs="brew services"
+alias -g sbs="sudo brew services"
