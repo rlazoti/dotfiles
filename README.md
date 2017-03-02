@@ -79,6 +79,13 @@ git config --global difftool.prompt false
 sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer/
 ```
 
+### Iterm2 Settings
+
+ Open iterm2 settings and change "Load preferences from a custom folder or URL" field to
+
+ ```
+ ~/.terminal/iterm2-preferences
+ ```
 
 Author
 ======
