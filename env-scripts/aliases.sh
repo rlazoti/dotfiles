@@ -28,8 +28,8 @@ alias -g k='gitk'
 alias -g hosts="sudo XMODIFIERS=\'\' vi /etc/hosts"
 alias -g n="node"
 alias -g E="sudo $EDITOR "
-alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash"
-alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash --no-init-file"
+alias -g ii="XMODIFIERS=\'\' emacs -nw --no-splash"
+alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash --no-init-file"
 alias -g sk9='sudo kill -9'
 alias -g psg='ps aux | grep'
 alias -g ee="open -n -a /Applications/Emacs.app $1"
