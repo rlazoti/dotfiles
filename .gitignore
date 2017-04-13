@@ -1,3 +1,4 @@
 private.sh
 tmux-powerline
-
+sbt/plugins/project
+sbt/plugins/target

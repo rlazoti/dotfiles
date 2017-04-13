@@ -1,9 +1,7 @@
 if [[ "$OSTYPE" = *darwin* ]] then
     # Mac OS
-    export HOME=/Users/rodrigolazoti/
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/
+    export HOME=/Users/rlazoti/
 else
     # Linux
     export HOME=/home/rlazoti
-    export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 fi
