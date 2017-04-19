@@ -12,3 +12,7 @@ externalResolvers := {
   ("Twitter Repo" at "https://maven.twttr.com") +:
   externalResolvers.value
 }
+
+// Enabling syntax and type mismatch diffs highlighting
+import com.softwaremill.clippy.ClippySbtPlugin._ // needed in global configuration only
+clippyColorsEnabled := true
