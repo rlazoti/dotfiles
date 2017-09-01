@@ -1,6 +1,10 @@
 // Enable the sbt-dependency-graph plugin
 // net.virtualvoid.sbt.graph.Plugin.graphSettings
 
+// Ensime global configs
+import org.ensime.EnsimeKeys._
+ensimeIgnoreMissingDirectories in ThisBuild := true
+
 // You always want the console cleaned at the the start of each run:
 triggeredMessage in ThisBuild := Watched.clearWhenTriggered
 
@@ -12,7 +16,3 @@ externalResolvers := {
   ("Twitter Repo" at "https://maven.twttr.com") +:
   externalResolvers.value
 }
-
-// Enabling syntax and type mismatch diffs highlighting
-import com.softwaremill.clippy.ClippySbtPlugin._ // needed in global configuration only
-clippyColorsEnabled := true
