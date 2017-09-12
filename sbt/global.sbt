@@ -16,3 +16,5 @@ externalResolvers := {
   ("Twitter Repo" at "https://maven.twttr.com") +:
   externalResolvers.value
 }
+
+credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
