@@ -1,7 +1,7 @@
 if [[ "$OSTYPE" = *darwin* ]] then
     # Mac OS
-    export HOME=/Users/rlazoti/
+    export HOME=/Users/rodrigolazoti/
 else
     # Linux
-    export HOME=/home/rlazoti
+    export HOME=/home/rodrigolazoti
 fi
