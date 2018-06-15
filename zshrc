@@ -48,7 +48,7 @@ LANGUAGE="en_US.UTF-8"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(themes tmux command-not-found colorize docker)
+plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm)
 
 fpath=(~/.terminal/rvm-completion $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
