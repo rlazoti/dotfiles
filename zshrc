@@ -45,10 +45,14 @@ LC_ALL="en_US.UTF-8"
 LC_CTYPE="en_US.UTF-8"
 LANGUAGE="en_US.UTF-8"
 
+# Load extensions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm)
+plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm aws zsh-completions)
 
 fpath=(~/.terminal/rvm-completion $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
