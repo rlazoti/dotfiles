@@ -11,3 +11,5 @@ Thumbs.db
 
 # Ignore emacs buffer files
 \#*#
+
+dependency-reduced-pom.xml

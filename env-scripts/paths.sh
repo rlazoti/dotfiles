@@ -25,4 +25,4 @@ fi
 # shared
 export EDITOR="emacs -nw --no-splash"
 export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/.bin
