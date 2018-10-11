@@ -18,3 +18,8 @@ function gplb() {
 function gpsb() {
     git push $1 origin $(git symbolic-ref --short HEAD)
 }
+
+# Run git pull to update all Git repositories in a working directory and its subdirectories
+function gplall() {
+    find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;
+}
