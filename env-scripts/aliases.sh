@@ -26,6 +26,7 @@ alias -g gplo='git pull origin --rebase --tags'
 alias -g gpso='git push origin'
 alias -g grb='git rebase'
 alias -g gmg='git merge'
+alias -g gmt='git mergetool'
 alias -g k='gitk'
 alias -g hosts="sudo XMODIFIERS=\'\' vi /etc/hosts"
 alias -g n="node"
