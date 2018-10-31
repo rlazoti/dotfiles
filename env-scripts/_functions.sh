@@ -5,7 +5,7 @@ function gcamb() {
         echo ERROR: No commit message was given. Please enter a commit message 1>&2
         echo gcamb \"Add something somewhere because of something\"
     else
-        git commit -m "$(git symbolic-ref --short HEAD) - $1"
+        git commit -m "$(git symbolic-ref --short HEAD): $1"
     fi
 }
 
