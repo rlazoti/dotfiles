@@ -21,12 +21,12 @@ alias -g mci='mvn clean install'
 alias -g mcp='mvn clean package'
 alias -g mct='mvn clean test'
 alias -g gpl='git pull --rebase --tags'
-#alias -g gps='git push'
 alias -g gplo='git pull origin --rebase --tags'
 alias -g gpso='git push origin'
 alias -g grb='git rebase'
 alias -g gmg='git merge'
 alias -g gmt='git mergetool'
+alias -g gpf='git prune && git fetch'
 alias -g k='gitk'
 alias -g hosts="sudo XMODIFIERS=\'\' vi /etc/hosts"
 alias -g n="node"
