@@ -1,3 +1,8 @@
+# Display head and tail of a file
+function headtail() {
+    (head; tail) < $1
+}
+
 # Git commit with branch name before customized message
 function gcamb() {
     if [ -z "$1" ];
