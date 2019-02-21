@@ -20,6 +20,7 @@ alias -g gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Crese
 alias -g mci='mvn clean install'
 alias -g mcp='mvn clean package'
 alias -g mct='mvn clean test'
+alias -g mcv='mvn clean verify'
 alias -g gpl='git pull --rebase --tags'
 alias -g gplo='git pull origin --rebase --tags'
 alias -g gpso='git push origin'
