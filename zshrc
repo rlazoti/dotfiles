@@ -52,10 +52,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm aws zsh-completions)
+plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm aws)
 
-fpath=(~/.terminal/rvm-completion $fpath)
-fpath=(/usr/local/share/zsh-completions $fpath)
+#fpath=(~/.terminal/rvm-completion $fpath)
+#fpath=(/usr/local/share/zsh-completions $fpath)
 
 # add suport for color in terminal
 export TERM="xterm-256color"
