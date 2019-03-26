@@ -27,6 +27,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$terminfo[bold]$fg[cyan]%} %{$reset_color%}
 ZSH_END_PROMPT="
 %{$fg[red]%}%{$reset_color%}%{$fg[green]%}%{$reset_color%}%{$fg[yellow]%}%{$reset_color%} "
 
-PROMPT='%{$terminfo[bold]$fg[cyan]%}%n%{$reset_color%}%{$terminfo[bold]$fg[white]%} at %{$reset_color%}%{$terminfo[bold]$fg[green]%}%m%{$reset_color%}%{$terminfo[bold]$fg[white]%} in %{$reset_color%}%{$terminfo[bold]$fg[red]%}%0~$(git_branch)%{$reset_color%}$ZSH_END_PROMPT'
-
+PROMPT='
+%{$terminfo[bold]$fg[cyan]%}%n%{$reset_color%}%{$terminfo[bold]$fg[white]%} at %{$reset_color%}%{$terminfo[bold]$fg[green]%}%m%{$reset_color%}%{$terminfo[bold]$fg[white]%} in %{$reset_color%}%{$terminfo[bold]$fg[red]%}%0~$(git_branch)%{$reset_color%}$ZSH_END_PROMPT'
+PROMPT2='. '
 RPROMPT='$(git_stash)$(git_prompt_status)'
