@@ -20,6 +20,8 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>AutoHideTmuxClientSession</key>
+	<true/>
 	<key>CopySelection</key>
 	<false/>
 	<key>Default Bookmark Guid</key>
@@ -30,11 +32,13 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
+	<string>~/Documents</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -67,12 +71,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>292 204 1249 474 0 0 1920 1058 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>548 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>312 237 918 492 0 0 1920 1058 </string>
+	<string>380 1405 796 486 -560 1050 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 180 1600 878 1920 180 1600 878 </string>
+	<string>720 1050 1279 1057 -560 1050 2560 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_06D5DDE2-4AAD-428D-9648-667A2143AE25</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_06D5DDE2-4AAD-428D-9648-667A2143AE25_selection</key>
@@ -1295,16 +1299,30 @@
 			<string>/Users/rlazoti</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
+	<key>NoSyncInstallUtilitiesPackage</key>
+	<true/>
+	<key>NoSyncInstallUtilitiesPackage_selection</key>
+	<integer>2</integer>
 	<key>NoSyncInstallationId</key>
-	<string>51FEC945-F1FE-4F84-8FCB-C75568DC2738</string>
+	<string>1030A822-FAA7-44CF-9658-54BF76BBCCDF</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>543339270.93630195</real>
+	<real>554583869.94472098</real>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
@@ -1349,7 +1367,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/rodrigolazoti/.terminal/iterm2-preferences/</string>
+	<string>/Users/rodrigolazoti/.terminal/iterm2-preferences</string>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1357,11 +1375,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=51</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=34</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-21T17:35:48Z</date>
+	<date>2019-03-26T14:11:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1381,6 +1399,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.2.8</string>
 </dict>
 </plist>

@@ -7,6 +7,7 @@ git clone https://github.com/erikw/tmux-powerline.git ~/.terminal/tmux-powerline
 echo "install oh-my-zsh"
 rm -rf ~/.oh-my-zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git clone https://github.com/rlazoti/hacker-quotes.git ~/.oh-my-zsh/custom/plugins/hacker-quotes
 
 # set hidden files
 echo "remove old conf files..."

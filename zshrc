@@ -45,14 +45,27 @@ LC_ALL="en_US.UTF-8"
 LC_CTYPE="en_US.UTF-8"
 LANGUAGE="en_US.UTF-8"
 
+# Custom bgnotify message
+function bgnotify_formatted {
+    elapsed="$(( $3 % 60 ))s"
+    (( $3 >= 60 )) && elapsed="$((( $3 % 3600) / 60 ))m $elapsed"
+    (( $3 >= 3600 )) && elapsed="$(( $3 / 3600 ))h $elapsed"
+    [ $1 -eq 0 ] && _custom_bgnotify "#win (took $elapsed)" "$2" || _custom_bgnotify "#fail (took $elapsed)" "$2"
+}
+
+function _custom_bgnotify {
+    terminal-notifier -message "$2" -title "$1" >/dev/null
+}
+
 # Load extensions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm aws)
+plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm aws bgnotify hacker-quotes)
 
 #fpath=(~/.terminal/rvm-completion $fpath)
 #fpath=(/usr/local/share/zsh-completions $fpath)
