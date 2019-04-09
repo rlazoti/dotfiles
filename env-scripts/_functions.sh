@@ -31,13 +31,13 @@ function gpsb() {
 # Run git pull to update all Git repositories in a working directory and its subdirectories
 function gplall() {
     CURRENT_DIR=$(pwd)
-    #find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;
+
     for DIR in $(find . -type d -name .git)
     do
         if [[ "${DIR}" != *".terraform/modules/"* ]];
         then
             cd $DIR/../
-            #echo "INFO: Sync $(pwd)"
+            echo "INFO: Sync $(pwd)"
 
             if [[ -z $(git status -s) ]];
             then
