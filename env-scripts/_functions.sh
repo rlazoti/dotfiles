@@ -3,6 +3,10 @@ function headtail() {
     (head; tail) < $1
 }
 
+function del_all_dir_occurs() {
+    #find . -path '*/.terraform' -type d | xargs rm -rf
+}
+
 # Git commit with branch name before customized message
 function gcamb() {
     if [ -z "$1" ];
@@ -26,7 +30,35 @@ function gpsb() {
 
 # Run git pull to update all Git repositories in a working directory and its subdirectories
 function gplall() {
-    find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;
+    CURRENT_DIR=$(pwd)
+    #find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;
+    for DIR in $(find . -type d -name .git)
+    do
+        if [[ "${DIR}" != *".terraform/modules/"* ]];
+        then
+            cd $DIR/../
+            #echo "INFO: Sync $(pwd)"
+
+            if [[ -z $(git status -s) ]];
+            then
+                if git show-ref --verify --quiet refs/heads/staging
+                then
+                    git checkout --quiet staging
+                    git pull origin --quiet --rebase --tags staging
+                else
+                    git checkout --quiet master
+                    git pull origin --quiet --rebase --tags master
+                fi
+                echo "INFO: OK $(pwd)"
+            else
+                echo "WARNING: $(pwd) has unstaged changes."
+            fi
+
+            cd $CURRENT_DIR
+        fi
+    done
+
+    cd $CURRENT_DIR
 }
 
 # Delete all already merged branches, and confirm if the non-merged should be delete as well
@@ -35,20 +67,20 @@ function gbclean() {
 
     for BRANCH in $(git branch --merged)
     do
-	local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)  
-	if [[ -z $match ]]; then
-	    git branch -D $BRANCH
-	fi
+  local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)
+  if [[ -z $match ]]; then
+      git branch -D $BRANCH
+  fi
     done
 
     for BRANCH in $(git branch --no-merged)
     do
-	local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)  
-	if [[ -z $match ]]; then
-	    read REPLY\?"Branch '$BRANCH' isn't merge yet. Do you want to delete it? [Y/n] "
-	    if [[ $REPLY = "Y" ]]; then
-		git branch -D $BRANCH
-	    fi
-	fi
+  local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)
+  if [[ -z $match ]]; then
+      read REPLY\?"Branch '$BRANCH' isn't merge yet. Do you want to delete it? [Y/n] "
+      if [[ $REPLY = "Y" ]]; then
+    git branch -D $BRANCH
+      fi
+  fi
     done
 }
