@@ -84,3 +84,25 @@ function gbclean() {
   fi
     done
 }
+
+# Display all repositories which have checkout any branch different from master or staging
+function gbshow() {
+    CURRENT_DIR=$(pwd)
+
+    for DIR in $(find . -type d -name .git)
+    do
+        if [[ "${DIR}" != *".terraform/modules/"* ]];
+        then
+            cd $DIR/../
+
+            if [[ $(git rev-parse --abbrev-ref HEAD) != "staging" ]] && [[ $(git rev-parse --abbrev-ref HEAD) != "master" ]];
+            then
+                echo "WARNING: $(pwd) -> branch: $(git rev-parse --abbrev-ref HEAD)"
+            fi
+
+            cd $CURRENT_DIR
+        fi
+    done
+
+    cd $CURRENT_DIR
+}
