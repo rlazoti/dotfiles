@@ -1,3 +1,8 @@
+# Convert unix epoch to date time
+function epoch_to_date() {
+    date -j -f %s "$(expr $1 / 1000)"
+}
+
 # Display head and tail of a file
 function headtail() {
     (head; tail) < $1
