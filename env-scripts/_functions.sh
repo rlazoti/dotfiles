@@ -1,6 +1,13 @@
 # Convert unix epoch to date time
 function epoch_to_date() {
-    date -j -f %s "$(expr $1 / 1000)"
+    ##value=$(($1 / 1000000000000))
+
+    if [[ $(($1 / 1000000000000)) -ge 1 ]]
+    then
+        date -j -f %s "$(expr $1 / 1000)"
+    else
+	date -j -f %s $1
+    fi
 }
 
 # Display head and tail of a file
