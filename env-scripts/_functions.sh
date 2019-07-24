@@ -1,3 +1,10 @@
+# Get current unix epoch
+function epoch_now() {
+    NOW=$(date +"%s")
+    EPOCH=$(($NOW * 1000))
+    echo $EPOCH
+}
+
 # Convert unix epoch to date time
 function epoch_to_date() {
     if [[ $(($1 / 1000000000000)) -ge 1 ]]
