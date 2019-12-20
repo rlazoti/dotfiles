@@ -42,3 +42,4 @@ alias -g sbs="sudo brew services"
 alias -g sk9='sudo kill -9'
 alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash -q -l \"~/.emacs.d/terminal/init.el\""
 alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash"
+alias -g t="tmux"

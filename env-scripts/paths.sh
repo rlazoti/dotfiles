@@ -19,6 +19,7 @@ else
     export PATH=$HOME/.rbenv/shims:$PATH
     export PATH=$HOME/.rvm/bin:$PATH
     export PATH=/usr/local/sbin:$PATH
+    export PATH=/usr/local/opt/tcl-tk/bin:$PATH
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 fi
 
