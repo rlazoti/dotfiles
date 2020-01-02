@@ -26,6 +26,7 @@ brew install sbcl
 brew install sbt
 brew install scala
 brew install the_silver_searcher
+brew install tig
 brew install tree
 brew install unar
 brew install unrar
