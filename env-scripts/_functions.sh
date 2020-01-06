@@ -142,21 +142,21 @@ function gbclean() {
 
     for BRANCH in $(git branch --merged)
     do
-  local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)
-  if [[ -z $match ]]; then
-      git branch -D $BRANCH
-  fi
+        local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)
+        if [[ -z $match ]]; then
+            git branch -D $BRANCH
+        fi
     done
 
     for BRANCH in $(git branch --no-merged)
     do
-  local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)
-  if [[ -z $match ]]; then
-      read REPLY\?"Branch '$BRANCH' isn't merge yet. Do you want to delete it? [Y/n] "
-      if [[ $REPLY = "Y" ]]; then
-    git branch -D $BRANCH
-      fi
-  fi
+        local match=$(echo "${ignored_branches[@]:0}" | grep -o $BRANCH)
+        if [[ -z $match ]]; then
+            read REPLY\?"Branch '$BRANCH' isn't merge yet. Do you want to delete it? [Y/n] "
+            if [[ $REPLY = "Y" ]]; then
+                git branch -D $BRANCH
+            fi
+        fi
     done
 }
 
