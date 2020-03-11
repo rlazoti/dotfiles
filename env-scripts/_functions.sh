@@ -181,3 +181,10 @@ function gbshow() {
 
     cd $CURRENT_DIR
 }
+
+# Reset develop branch before checkout
+function gckdev() {
+    gb -D develop
+    gck develop
+    gplb
+}
