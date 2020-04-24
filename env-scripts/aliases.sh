@@ -1,4 +1,6 @@
 alias -g ...='cd ..'
+alias -g ....='cd ../../'
+alias -g .....='cd ../../../'
 alias -g E="sudo $EDITOR "
 alias -g b="brew"
 alias -g bc="brew cask"

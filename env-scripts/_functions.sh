@@ -184,7 +184,7 @@ function gbshow() {
 
 # Reset develop branch before checkout
 function gckdev() {
-    gb -D develop
-    gck develop
-    gplb
+    git branch -D develop
+    git checkout develop
+    git pull origin develop
 }
