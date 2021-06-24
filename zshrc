@@ -65,7 +65,7 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn sbt scala npm aws bgnotify hacker-quotes)
+plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn npm aws bgnotify)
 
 #fpath=(~/.terminal/rvm-completion $fpath)
 #fpath=(/usr/local/share/zsh-completions $fpath)
@@ -75,10 +75,32 @@ export TERM="xterm-256color"
 
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="/Users/rodrigo.lazoti//.sdkman"
+# [[ -s "/Users/rodrigo.lazoti//.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rodrigo.lazoti//.sdkman/bin/sdkman-init.sh"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export JENV_ROOT=/usr/local/opt/jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+#eval "$(pyenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 source ~/.terminal/environment
+
+#screenfetch
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME//.rvm/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/Cellar/terraform@0.11/0.11.14/bin/terraform terraform
+[ -f "/Users/rodrigo.lazoti//.ghcup/env" ] && source "/Users/rodrigo.lazoti//.ghcup/env" # ghcup-env
+
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+eval "$(rbenv init -)"

@@ -1,0 +1,1 @@
+fortune -s computers | cowsay

@@ -32,6 +32,7 @@ alias -g la='ls -la'
 alias -g lht='ls -lht'
 alias -g ll='ls -hl'
 alias -g ls='ls -G'
+alias -g mcc='mvn clean compile'
 alias -g mci='mvn clean install'
 alias -g mcp='mvn clean package'
 alias -g mct='mvn clean test'
@@ -45,3 +46,4 @@ alias -g sk9='sudo kill -9'
 alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash -q -l \"~/.emacs.d/terminal/init.el\""
 alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash"
 alias -g t="tmux"
+alias -g go_to_icloud_drive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
