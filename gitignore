@@ -15,3 +15,13 @@ Thumbs.db
 dependency-reduced-pom.xml
 
 .java-version
+
+.projectile
+
+sorbet/rbi/gems/
+
+bin/spoom
+bin/tapioca
+bin/typecheck
+bin/verify_sigs
+Gemfile.lock

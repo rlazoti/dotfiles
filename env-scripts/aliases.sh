@@ -22,11 +22,12 @@ alias -g gpl='git pull --rebase --tags'
 alias -g gplo='git pull origin --rebase --tags'
 alias -g gpm='git pull --rebase origin master --tags'
 alias -g gpso='git push origin'
+alias -g gbnew='git checkout -b'
 alias -g grb='git rebase'
 alias -g gs='echo "do you mean \"gst\"? :P"'
 alias -g gst='git status -sb'
-alias -g hosts="sudo XMODIFIERS=\'\' vi /etc/hosts"
-alias -g k='gitk'
+#alias -g hosts="sudo XMODIFIERS=\'\' vi /etc/hosts"
+alias -g k='github'
 alias -g l='ls -l'
 alias -g la='ls -la'
 alias -g lht='ls -lht'
@@ -43,7 +44,10 @@ alias -g psg='ps aux | grep'
 alias -g reload='source ~/.zshrc'
 alias -g sbs="sudo brew services"
 alias -g sk9='sudo kill -9'
-alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash -q -l \"~/.emacs.d/terminal/init.el\""
+#alias -g vi="XMODIFIERS=\'\' emacs -nw --no-splash -q -l \"~/.emacs.d/terminal/init.el\""
 alias -g vii="XMODIFIERS=\'\' emacs -nw --no-splash"
 alias -g t="tmux"
 alias -g go_to_icloud_drive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+alias -g br="bin/rails"
+alias -g brg="bin/rails generate"
+alias -g brc="bin/rails console"
