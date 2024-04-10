@@ -6,7 +6,6 @@ alias -g b="brew"
 alias -g bc="brew cask"
 alias -g bs="brew services"
 alias -g c='clear'
-alias -g ee="open -n -a /Applications/Emacs.app $1"
 alias -g gaa.='git add .'
 alias -g gaa='git add'
 alias -g gb='git branch'

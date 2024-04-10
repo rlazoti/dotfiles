@@ -1,3 +1,9 @@
+function prepage_go_project() {
+  go get golang.org/x/tools/gopls
+  go get golang.org/x/lint/golint
+  go get github.com/cweill/gotests
+}
+
 # Get current unix epoch
 function epoch_now() {
     NOW=$(date +"%s")

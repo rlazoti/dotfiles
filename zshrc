@@ -1,36 +1,11 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="my-custom-theme"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
-# Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
 DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
 DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-#COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -58,49 +33,40 @@ function _custom_bgnotify {
 }
 
 # Load extensions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(themes tmux command-not-found colorize docker docker-compose brew mvn npm aws bgnotify)
 
-#fpath=(~/.terminal/rvm-completion $fpath)
-#fpath=(/usr/local/share/zsh-completions $fpath)
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+ZSH_DISABLE_COMPFIX=true
 
 # add suport for color in terminal
 export TERM="xterm-256color"
 
 source $ZSH/oh-my-zsh.sh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="/Users/rodrigo.lazoti//.sdkman"
-# [[ -s "/Users/rodrigo.lazoti//.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rodrigo.lazoti//.sdkman/bin/sdkman-init.sh"
-
-export JENV_ROOT=/usr/local/opt/jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-#eval "$(pyenv init -)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-#[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+autoload -U +X bashcompinit && bashcompinit
+[ -f "/Users/rodrigo.lazoti//.ghcup/env" ] && source "/Users/rodrigo.lazoti//.ghcup/env" # ghcup-env
+
+[[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 source ~/.terminal/environment
 
-#screenfetch
+# cloudplatform: add Shopify clusters to your local kubernetes config
+#export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/rodrigolazoti/.kube/config:/Users/rodrigolazoti/.kube/config.shopify.cloudplatform
+#for file in /Users/rodrigolazoti/src/github.com/Shopify/cloudplatform/workflow-utils/*.bash; do source ${file}; done
+#kubectl-short-aliases
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME//.rvm/bin"
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/Cellar/terraform@0.11/0.11.14/bin/terraform terraform
-[ -f "/Users/rodrigo.lazoti//.ghcup/env" ] && source "/Users/rodrigo.lazoti//.ghcup/env" # ghcup-env
-
-#source /usr/local/opt/chruby/share/chruby/chruby.sh
-eval "$(rbenv init -)"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client@5.7/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client@5.7/include"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
