@@ -25,6 +25,7 @@ ln -s ~/.terminal/tigrc ~/.tigrc
 ln -s ~/.terminal/my-custom-theme.zsh-theme ~/.oh-my-zsh/themes/my-custom-theme.zsh-theme
 mv ~/.terminal/tmux-powerline/themes/default.sh ~/.terminal/tmux-powerline/themes/original-theme.sh
 ln -s ~/.terminal/my-powerline-theme.zsh-theme ~/.terminal/tmux-powerline/themes/default.sh
+ln -s ~/.terminal/irbrc ~/.irbrc
 
 # define global git config
 echo "add global git settings..."

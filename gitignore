@@ -17,6 +17,7 @@ dependency-reduced-pom.xml
 .java-version
 
 .projectile
+.dir-locals.el
 
 sorbet/rbi/gems/
 
@@ -25,3 +26,11 @@ bin/tapioca
 bin/typecheck
 bin/verify_sigs
 Gemfile.lock
+
+patch.1
+.aider*
+
+CLAUDE.local.md
+.projectile
+
+.claude/settings.local.json
